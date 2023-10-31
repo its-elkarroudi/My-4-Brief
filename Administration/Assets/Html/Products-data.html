@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="../Css/Main.css">
+
+    <title>Adm - Products</title>
+</head>
+<body>
+    
+    <section id="Products">
+        <div class="container">
+            <div class="title d-flex">
+                <div class="hero">
+                    <h1>Administration</h1>
+                    <p>Take Full Control Of BookSea Product and Categories !</p>
+                </div>
+                <div>
+                    <a href="../../Admin.html" class="sp-btn" style="margin-right: 20px;">Return</a>
+                    <button class="sp-btn-reverse" id="add_New_Product_btn">Add New Product</button>
+                </div>
+                
+            </div>
+
+            <div class="products-section">
+
+                <div class="product-table-head">
+                    <h3>ID</h3>
+                    <h3>Title</h3>
+                    <h3>Price</h3>
+                    <h3>Quantity</h3>
+                    <h3>Action</h3>
+                </div>
+
+                <div class="products-container">
+                    <div class="product">
+                        <h3>01</h3>
+                        <h3>Product Name Here</h3>
+                        <h3>150 Dh</h3>
+                        <h3>19</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Category_btn">Modify</button>
+                        </h3>
+                    </div>
+
+                    <div class="product">
+                        <h3>01</h3>
+                        <h3>Product Name Here</h3>
+                        <h3>150 Dh</h3>
+                        <h3>19</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Category_btn">Modify</button>
+                        </h3>
+                    </div>
+
+                    <div class="product">
+                        <h3>01</h3>
+                        <h3>Product Name Here</h3>
+                        <h3>150 Dh</h3>
+                        <h3>19</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Category_btn">Modify</button>
+                        </h3>
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ADD NEW PRODUCT ============================================================ -->
+    <section id="add_New_Product" class="">
+
+        <!-- HERO  ============ -->
+        <div class="hero d-flex" style="align-items: center;">
+            <h1>Add New Product</h1>
+            <button id="add_New_Product_Btn_close" class="sp-btn">Close</button>
+        </div>
+
+        <!-- FORM ============ -->
+        <form id="addBookForm">
+
+                <input type="text" value="01"   style="background-color: #eaeaea;" readonly>
+                <div class="errorMessage">
+                
+                </div>
+
+                <input type="text" placeholder="ISBN" id="bookIsbn"  class="" >
+                <div class="errorMessage">
+                    <p id="isbnError"></p>
+                </div>
+
+                <input type="text" placeholder="BOOK Title" id="bookTitle"   class="" >
+                <div class="errorMessage">
+                    <p id="titleError"></p>
+                </div>
+
+                <input type="text" placeholder="BOOK Price" id="bookPrice"  class="" >
+                <div class="errorMessage">
+                    <p id="priceError"></p>
+                </div>
+
+                <input type="text" placeholder="Quantity in stock" id="bookQuantity"  class="" >
+                <div class="errorMessage">
+                    <p id="quantityError"></p>
+                </div>
+
+                <input type="text" placeholder="Author" id="bookAuthor"  class="" >
+                <div class="errorMessage">
+                    <p id="authorError"></p>
+                </div>  
+
+                <textarea placeholder="Description" id="bookDescription" ></textarea>
+                <div class="errorMessage">
+                    <p id="descError"></p>
+                </div>
+
+                <input type="file" id="addBookImg" accept="image/*" title="add Your Book Image">
+                <div class="errorMessage">
+                    <p id="imgError"></p>
+                </div>
+
+
+            <button class="sp-btn-reverse" id="btn-submit">Save Details</button>
+        </form>
+    </section>
+
+
+
+    <!-- EDIT PRODUCT ============================================================ -->
+    <section id="edit_Product" class="">
+
+        <!-- HERO  ============ -->
+        <div class="hero d-flex" style="align-items: center;">
+            <div>
+                <h1>Edit Product</h1>
+                <p>by modifying and saving new data, the old one's will be deleted permanently .</p>
+            </div>
+            <button class="sp-btn edit_Product_btn_close">Close</button>
+        </div>
+
+        <!-- FORM ============ -->
+        <form id="editBookForm">
+
+                <input type="text" value="01" name="book-id"  style="background-color: #eaeaea;" readonly>
+                <div class="errorMessage"></div>
+
+                <input type="text" value="1577 6684 2684 3674"  id="bookIsbn2"  name="book_isbn" class="" >
+                <div class="errorMessage">
+                    <p id="isbnError2"></p>
+                </div>
+
+                <input type="text" value="Product Name Here" id="bookTitle2" name="book_name" class="" >
+                <div class="errorMessage">
+                    <p id="titleError2"></p>
+                </div>
+
+                <input type="text" value="150 Dh"  id="bookPrice2" name="book_price" class="" >
+                <div class="errorMessage">
+                    <p id="priceError2"></p>
+                </div>
+
+                <input type="text" value="19" id="bookQuantity2" name="book_stock" class="" >
+                <div class="errorMessage">
+                    <p id="quantityError2"></p>
+                </div>
+
+                <input type="text" value="Author Name" id="bookAuthor2"  name="book_author" class="" >
+                <div class="errorMessage">
+                    <p id="authorError2"></p>
+                </div>  
+
+                <textarea id="bookDescription2" name="book_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat deleniti quia deserunt, hic similique voluptates.</textarea>
+                <div class="errorMessage">
+                    <p id="descError2"></p>
+                </div>
+
+                <input type="file" id="addBookImg2" accept="image/*" title="add Your Book Image">
+                <div class="errorMessage">
+                    <p id="imgError2"></p>
+                </div>
+
+
+            <button class="sp-btn-reverse">Save Details</button>
+        </form>
+    </section>
+
+
+
+
+    <section>
+        <div class="container">
+            <h1 id="book_empty"></h1>
+        </div>
+    </section>
+
+    <script src="../../../javascript/bookValidation.js"></script>
+    <script src="../Js/Por-fonctionalite.js"></script>
+    
+</body>
+</html>
