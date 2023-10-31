@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {list-style: none;}
+a {text-decoration: none; color: #000;}
+body { font-family: 'Montserrat', sans-serif;}
+
+:root {
+    --principal-color: #34495E; 
+    --secondary-color: #28427B;
+    --third-color: #EDF2F4;
+    --error-color: red;
+    --warning-color: yellow;
+    --success-color: green;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.sp-btn,
+.sp-btn-reverse {
+    background-color: var(--third-color);
+    padding: 10px 20px;
+    font-weight: 800;
+    font-size: 18px;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+.sp-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    transition-duration: 1s;
+}
+
+.sp-btn-reverse {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+.sp-btn-reverse:hover {
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    transition-duration: 1s;
+}
+button.delete {
+    color: red;
+    border: 2px solid red;
+}
+button.delete:hover {
+    background-color: red;
+}
+/* == */
+input, select, textarea, button {
+    width: auto;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 20px;
+    outline: 0;
+    border: 2px solid #000;
+    resize: none;
+}
+input::placeholder,
+textarea::placeholder {color: #000000;}
+textarea {padding: 10px;}
+
+
+/* INVALID INPUTS & SELECT AND TEXTAREA */ 
+input.invalid, select.invalid, textarea.invalid {
+    color: red;
+    border: 2px solid red;
+    border-right: 8px solid red;
+}
+input.invalid::placeholder, textarea.invalid::placeholder {color: red;}
+
+/* VALID INPUTS & SELECT AND TEXTAREA */ 
+input.valid, select.valid, textarea.valid  {
+    color: green;
+    border: 2px solid green;
+    border-right: 8px solid green;
+}
+input.valid::placeholder, textarea.valid::placeholder {color: green;}
+
+/* ERROR MESSAGE */
+.errorMessage {
+    color: #fff;
+    background-color: red;
+    width: 150px;
+    padding: 0 10px;
+    overflow-y: hidden;
+}
