@@ -148,7 +148,7 @@ footer .foot-2 {
 }
 
 footer .errorMessage {
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 700px) {
