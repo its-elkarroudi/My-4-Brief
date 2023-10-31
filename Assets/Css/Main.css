@@ -196,6 +196,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.d-flexfooter {
+  display: flex;
+  justify-content: space-around;
+}
 
 .sp-btn,
 .sp-btn-reverse {
