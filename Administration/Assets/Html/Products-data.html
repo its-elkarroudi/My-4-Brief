@@ -31,7 +31,6 @@
             </div>
 
             <div class="products-section">
-
                 <div class="product-table-head">
                     <h3>ID</h3>
                     <h3>Title</h3>
@@ -39,9 +38,8 @@
                     <h3>Quantity</h3>
                     <h3>Action</h3>
                 </div>
-
-                <div class="products-container">
-                    <div class="product">
+                <div class="products-container"  id="products-container">
+                    <!-- <div class="product">
                         <h3>01</h3>
                         <h3>Product Name Here</h3>
                         <h3>150 Dh</h3>
@@ -50,29 +48,8 @@
                             <button class="sp-btn delete">Delete</button>
                             <button class="sp-btn modify_Category_btn">Modify</button>
                         </h3>
-                    </div>
-
-                    <div class="product">
-                        <h3>01</h3>
-                        <h3>Product Name Here</h3>
-                        <h3>150 Dh</h3>
-                        <h3>19</h3>
-                        <h3>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="sp-btn modify_Category_btn">Modify</button>
-                        </h3>
-                    </div>
-
-                    <div class="product">
-                        <h3>01</h3>
-                        <h3>Product Name Here</h3>
-                        <h3>150 Dh</h3>
-                        <h3>19</h3>
-                        <h3>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="sp-btn modify_Category_btn">Modify</button>
-                        </h3>
-                    </div>  
+                    </div> -->
+ 
                 </div>
 
             </div>
@@ -90,7 +67,7 @@
         </div>
 
         <!-- FORM ============ -->
-        <form id="addBookForm">
+        <form id="addBookForm" class="addBookForm">
 
                 <input type="text" value="01"   style="background-color: #eaeaea;" readonly>
                 <div class="errorMessage">
@@ -130,6 +107,9 @@
                 <input type="file" id="addBookImg" accept="image/*" title="add Your Book Image">
                 <div class="errorMessage">
                     <p id="imgError"></p>
+                </div>
+                <div class="validation-msg">
+                    <p id="validation" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
                 </div>
 
 
@@ -191,9 +171,12 @@
                 <div class="errorMessage">
                     <p id="imgError2"></p>
                 </div>
+                <div class="validation-msg">
+                    <p id="validation2" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+                </div>
 
 
-            <button class="sp-btn-reverse">Save Details</button>
+            <button class="sp-btn-reverse" id="editBookBtn">Save Details</button>
         </form>
     </section>
 
@@ -208,6 +191,7 @@
 
     <script src="../../../javascript/bookValidation.js"></script>
     <script src="../Js/Por-fonctionalite.js"></script>
+    <script src="../../../javascript/models.js"></script>
     
 </body>
 </html>

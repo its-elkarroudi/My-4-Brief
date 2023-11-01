@@ -1,6 +1,5 @@
-////Category Validation
 
-const addCategoryForm = document.getElementById("New-category-form");
+
 const checkTitles = (title) => {
      const validTitle = /^[A-Za-z ]+$/;
      if(validTitle.test(title)){
@@ -21,7 +20,22 @@ const checkDescription = (description) => {
     }
 }
 
-addCategoryForm.addEventListener("submit", (event) =>{
+
+function restoreContent(parent,key) {
+    const content = JSON.parse(localStorage.getItem(key)) || [];
+    content.forEach((element) => {
+        const newDiv = document.createElement("div");
+        parent.appendChild(newDiv);
+        newDiv.outerHTML = element;
+    });
+}
+
+
+
+const newCategoryForm = document.getElementById("addCategoryForm");
+
+
+newCategoryForm.addEventListener("submit", (event) => {
     const categoryName = document.getElementById("category-name").value;
     const categoryDesc = document.getElementById("category-desc").value;
     const categoryInput = document.getElementById("category-name");
@@ -71,7 +85,7 @@ addCategoryForm.addEventListener("submit", (event) =>{
     event.preventDefault();
 })
 
-const modifyCatForm = document.getElementById("modify_Category");
+const modifyCatForm = document.getElementById("modifyCategory");
 
 modifyCatForm.addEventListener("submit", (event) =>{
     const categoryName = document.getElementById("modifyCatName").value;
@@ -124,4 +138,50 @@ modifyCatForm.addEventListener("submit", (event) =>{
     event.preventDefault();
 })
 
-//// Book Validation : 
+
+
+
+const modifyCategoryForm = document.getElementById("modifyCategory");
+
+modifyCategoryForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const Title = document.getElementById("modifyCatName");
+    const desc = document.getElementById("modifyCatDesc"); 
+    
+    modifyCategory(Title.value,desc.value);
+   
+})
+
+
+
+const categoryItems = document.getElementById("category-items");
+
+
+newCategoryForm.addEventListener("submit", (event) =>{
+    event.preventDefault();
+    const categoryName = document.getElementById("category-name");
+    const categoryDesc = document.getElementById("category-desc");
+    const validationMsg = document.getElementById("validation");
+
+   if(addCategory(categoryName.value,categoryDesc.value)){
+        validationMsg.textContent="category added successfully";
+        const newCat = document.createElement("div");
+        newCat.innerHTML = `
+                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
+                    <div class="info">
+                        <h1>${categoryName.value}</h1>
+                        <div>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="modify_Category_btn sp-btn ">Modify</button>
+                        </div>
+                    </div>  `;
+        newCat.classList.add("category");
+        categoryItems.appendChild(newCat);
+        saveContent(categoryItems,"category_List");
+    }
+    else{
+        validationMsg.textContent="category Name already exists !";
+    }
+});
+
+window.addEventListener("load",restoreContent(categoryItems,"category_List"));
