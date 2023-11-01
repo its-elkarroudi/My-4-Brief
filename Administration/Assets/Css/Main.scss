@@ -4,7 +4,8 @@
 /* START ADMINISTRATION HERO SECTION  */ 
 #home,
 #Products,
-#categories {
+#categories,
+#Author {
     width: 100%;
     height: auto;
     margin-top: 100px;
@@ -13,11 +14,13 @@
 
 #home .container,
 #Products .container,
-#categories .container {height: auto;}
+#categories .container,
+#Author .container {height: auto;}
 
 #home .container .title,
 #Products .container .title,
-#categories .container .title {
+#categories .container .title,
+#Author .container .title {
     align-items: center;
 }
 h1{
@@ -31,11 +34,15 @@ p{font-weight: 600;}
 
 /* START ADMINISTRATION ADM CONTENT SECTION =============================  */ 
 #home .container .adm-section {
+    flex-wrap: wrap;
+    // column-gap: 50px;
+    row-gap: 50px;
     margin-top: 50px;
     width: 100%;
 }
 #home .container .adm-section .categories,
-#home .container .adm-section .products {
+#home .container .adm-section .products,
+#home .authors {
     width: 45%;
     height: auto; 
     padding: 50px 0;
@@ -74,10 +81,12 @@ p{font-weight: 600;}
 #add_New_Category,
 #modify_Category,
 #add_New_Product,
-#edit_Product {
+#edit_Product,
+#add_New_Author,
+#modify_Author {
     position: fixed;
     top: 0;
-    right: -110%;
+    right: -100%;
     width: 50vw;
     height: 100vh;
     background-color: var(--third-color);
@@ -88,14 +97,18 @@ p{font-weight: 600;}
 #add_New_Category.show,
 #modify_Category.show,
 #add_New_Product.show,
-#edit_Product.show {
+#edit_Product.show,
+#add_New_Author.show,
+#modify_Author.show {
     right: 0;
     transition-duration: 1s;
 }
 #add_New_Category form,
 #modify_Category form,
 #add_New_Product form,
-#edit_Product form {
+#edit_Product form,
+#add_New_Author form,
+#modify_Author form{
     display: flex;
     flex-direction: column;
     margin-top: 43px;
@@ -103,7 +116,9 @@ p{font-weight: 600;}
 #add_New_Category form input,
 #add_New_Category form textarea,
 #modify_Category form input,
-#modify_Category form textarea{
+#modify_Category form textarea,
+#add_New_Author form input,
+#modify_Author form input {
     margin-bottom: 5px;
 }
 .errorMessage {margin-bottom: 20px; width: 100%;}
@@ -114,18 +129,21 @@ p{font-weight: 600;}
 
 
 /* PRODUCTS PAGE  =============== */
-#Products .products-section {
+#Products .products-section,
+#Author .Author-section {
     margin-top: 50px;
 }
-#Products .product-table-head {
+#Products .product-table-head,
+#Author .author-table-head {
     background-color: var(--secondary-color);
     color: var(--third-color);
     display: flex;
     justify-content: space-between;
     padding: 20px 20px;
 }
-#Products .products-container {margin-top: 30px;}
-#Products .product {
+#Products .products-container, #Author .Author-container {margin-top: 30px;}
+#Products .product,
+#Author .Author {
     background-color: var(--third-color);
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
@@ -145,11 +163,19 @@ p{font-weight: 600;}
 
 #add_New_Product form input[type="file"], #edit_Product form input[type="file"] {padding-top: 10px;}
 .errorMessage {margin-bottom: 10px; width: 100%;}
-#book_empty, #empty_category  {
+#book_empty, #empty_category, #empty_Author  {
     background-color: var(--third-color);
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
-    padding: 5px 10px;
+    padding: 0px 10px;
     display: none;
 }
-#book_empty.no-data, #empty_category.no-data {display: block;}
+#book_empty.no-data, #empty_category.no-data, #empty_Author {display: block;}
+
+
+/* AUTHOR ADM PAGE */
+#Author .author-table-head h3:first-child, .Author h3:first-child {width: 60px; font-weight: 900;}
+#Author .author-table-head h3:nth-child(2), .Author h3:nth-child(2) {width: 500px; font-weight: 900;}
+#Author .author-table-head h3:nth-child(3), .Author h3:nth-child(3) {width: 500px;}
+#Author .author-table-head h3:nth-child(4), .Author h3:nth-child(4) {width: 280px;}
+

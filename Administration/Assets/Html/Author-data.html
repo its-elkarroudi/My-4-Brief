@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="../Css/Main.css">
+
+    <title>Adm - Author</title>
+</head>
+<body>
+    
+    <!-- AUTHOR PAGE -->
+    <section id="Author">
+        <div class="container">
+            <!-- AUTHOR PAGE TITLE -->
+            <div class="title d-flex">
+                <div class="hero">
+                    <h1>Administration</h1>
+                    <p>Take Full Control Of BookSea Product and Categories !</p>
+                </div>
+                <div>
+                    <a href="../../Admin.html" class="sp-btn" style="margin-right: 20px;">Return</a>
+                    <button class="sp-btn-reverse" id="add_New_Author_btn">Add New Author</button>
+                </div>
+                
+            </div>
+
+            <!-- AUTHOR DATA SECTION -->
+            <div class="Author-section">
+
+                <!-- AUTHOR DATA TABLE HEAD -->
+                <div class="author-table-head">
+                    <h3>ID</h3>
+                    <h3>Name</h3>
+                    <h3>Speciality</h3>
+                    <h3>Action</h3>
+                </div>
+
+                <!-- AUTHOR DATA TABLE INFO -->
+                <div class="Author-container">
+                    <!-- DIV WHERE AUTHOR INFORMATION ARE DISPLAYED -->
+                    <div class="Author">
+                        <h3>01</h3>
+                        <h3>Author Name Here</h3>
+                        <h3>Speciality</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Author_btn">Modify</button>
+                        </h3>
+                    </div>
+
+                    <!-- DIV WHERE AUTHOR INFORMATION ARE DISPLAYED -->
+                    <div class="Author">
+                        <h3>01</h3>
+                        <h3>Author Name Here</h3>
+                        <h3>Speciality</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Author_btn">Modify</button>
+                        </h3>
+                    </div>
+
+                    <!-- DIV WHERE AUTHOR INFORMATION ARE DISPLAYED -->
+                    <div class="Author">
+                        <h3>01</h3>
+                        <h3>Author Name Here</h3>
+                        <h3>Speciality</h3>
+                        <h3>
+                            <button class="sp-btn delete">Delete</button>
+                            <button class="sp-btn modify_Author_btn">Modify</button>
+                        </h3>
+                    </div>
+
+                    <!-- WHERE OTHER AUTHOR WILL BE DISPLAYED QQ-->
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ADD NEW AUTHOR ============================================================ -->
+    <section id="add_New_Author" class="">
+        <!-- HERO  ============ -->
+        <div class="hero d-flex" style="align-items: center;">
+            <div>
+                <h1>Add New Author</h1>
+                <p>Please Add Your Author Info In Input’s !!</p>
+            </div>
+            <button id="add_New_Author_Btn_close" class="sp-btn">Close</button>
+        </div>
+
+        <!-- FORM ============ -->
+        <form action="" method="post" id="New-Author-form">
+            <input type="text" value="01" name="author-id" readonly style="background-color: #ddd;">
+
+            <input type="text" placeholder="Author Name" id="Author-name" name="Author-name" class="" >
+            <div class="errorMessage"></div>
+
+            <input type="text" placeholder="Author Speciality" id="Author-speciality" name="Auhtor-speciality" class="">
+            <div class="errorMessage">
+                <p id="errorMessage" style="color: white; font-weight: 600;"></p>
+            </div>
+
+            <button class="sp-btn-reverse" type="submit">Save Details</button>
+        </form>
+    </section>
+
+
+    <!-- ADD NEW AUTHOR ============================================================ -->
+    <section id="modify_Author" class="">
+        <!-- HERO  ============ -->
+        <div class="hero d-flex" style="align-items: center;">
+            <div>
+                <h1>Modify Author</h1>
+                <p>by modifying and saving new data, the old one's will be deleted permanently .</p>
+            </div>
+            <button id="modify_Author_Btn_close" class="sp-btn">Close</button>
+        </div>
+
+        <!-- FORM ============ -->
+        <form action="" method="post" id="modify-form">
+            <input type="text" value="01" name="category-id" readonly style="background-color: #ddd;">
+
+            <input type="text" placeholder="Author Name" id="Auhtor-name" name="Author-name" class="" >
+            <div class="errorMessage"></div>
+
+            <input type="text" placeholder="Author Speciality" id="Auhtor-speciality" name="Auhtor-speciality" class="">
+            <div class="errorMessage">
+                <p id="errorMessage" style="color: white; font-weight: 600;"></p>
+            </div>
+
+            <button class="sp-btn-reverse" type="submit">Save Details</button>
+        </form>
+    </section>
+
+
+
+
+
+
+    <section>
+        <div class="container">
+            <h1 id="empty_Author"></h1>
+        </div>
+    </section>
+
+    <script src="../Js/Author.js"></script>
+
+</body>
+</html>
