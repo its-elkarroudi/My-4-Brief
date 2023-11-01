@@ -1,5 +1,6 @@
 
 const addBookForm = document.getElementById("addBookForm");
+
 const checkTitles = (title) => {
     const validTitle = /^[A-Za-z ]+$/;
     if(validTitle.test(title)){
@@ -19,6 +20,8 @@ const checkDescription = (description) => {
        return false;
    }
 }
+
+
 
 const checkIsbn = (isbn)=>{
     const isbnValidation =/^[0-9]+$/ ;
@@ -49,7 +52,7 @@ const checkQuantity = (quantity)=>{
     if(quantityValidation.test(quantity)){
         return true;
      }
-     else{
+     else{ 
         return false;
      }
 }
@@ -68,21 +71,17 @@ const checkDisponibility = (disponibility)=>{
 
 
 
-const checkCategoryName = (catName,error)=>{
+const checkCategoryName = (catName)=>{
    
-    if (catName.trim() === ""){
-       error = "title can't be empty";
-    }
-    else{
-       const res = checkTitles(catName);
-    }
+   
+   
+    const res = checkTitles(catName);
 
     return res;
 }
 
 addBookForm.addEventListener("submit", (event) =>{
 
-    event.preventDefault();
 
     const isbn = document.getElementById("bookIsbn");
     const isbnError = document.getElementById("isbnError");
@@ -96,12 +95,14 @@ addBookForm.addEventListener("submit", (event) =>{
     const authorError = document.getElementById("authorError");
     const bookDescription = document.getElementById("bookDescription");
     const descError = document.getElementById("descError");
-    const addBookImg = document.getElementById("addBookImg");
-    const imgError = document.getElementById("imgError");
+    // const addBookImg = document.getElementById("addBookImg");
+    // const imgError = document.getElementById("imgError");
   
 
     if(isbn.value.trim() === ""){
        isbnError.textContent= "isbn should not be empty !";
+       event.preventDefault();
+
     }
 
     else if(checkIsbn(isbn.value)){
@@ -117,10 +118,14 @@ addBookForm.addEventListener("submit", (event) =>{
         }
         isbn.classList.add("invalid");
         isbnError.textContent ="isbn should be a number";
+        event.preventDefault();
+
     }
 
     if(bookTitle.value.trim() === ""){
         titleError.textContent= "title should not be empty !";
+        event.preventDefault();
+
      }
  
      else if(checkTitles(bookTitle.value)){
@@ -136,10 +141,14 @@ addBookForm.addEventListener("submit", (event) =>{
          }
          bookTitle.classList.add("invalid");
          titleError.textContent ="title only accepts characters";
+         event.preventDefault();
+
      }
 
      if(price.value.trim() === ""){
         priceError.textContent= "price should not be empty !";
+        event.preventDefault();
+
      }
  
      else if(checkPrice(price.value)){
@@ -155,10 +164,14 @@ addBookForm.addEventListener("submit", (event) =>{
          }
          price.classList.add("invalid");
          priceError.textContent ="price should be a number";
+         event.preventDefault();
+
      }
 
      if(bookQuantity.value.trim() === ""){
         quantityError.textContent= "quantity should not be empty !";
+        event.preventDefault();
+
      }
  
      else if(checkQuantity(bookQuantity.value)){
@@ -174,10 +187,13 @@ addBookForm.addEventListener("submit", (event) =>{
          }
          bookQuantity.classList.add("invalid");
          quantityError.textContent ="quantity should be a number";
+         event.preventDefault();
+
      }
 
      if(bookAuthor.value.trim() === ""){
         authorError.textContent= "author should not be empty !";
+        event.preventDefault();
      }
  
      else if(checkTitles(bookAuthor.value)){
@@ -193,13 +209,17 @@ addBookForm.addEventListener("submit", (event) =>{
          }
          bookAuthor.classList.add("invalid");
          authorError.textContent ="names cannot contain symboles or numbers";
+         event.preventDefault();
+
      }
 
 
      if(bookDescription.value.trim() === ""){
         descError.textContent= "description should not be empty !";
+        event.preventDefault();
+
      }
- 
+
      else if(checkDescription(bookDescription.value)){
          if(bookDescription.classList.contains("invalid")){
              bookDescription.classList.remove("invalid");
@@ -213,17 +233,23 @@ addBookForm.addEventListener("submit", (event) =>{
          }
          bookDescription.classList.add("invalid");
          descError.textContent ="names cannot contain symboles or numbers";
+         event.preventDefault();
+
      }
 
      
      if(!addBookImg.files[0]){
         imgError.textContent = "pls fill the image";
+        event.preventDefault();
+
      }
 
      const allowedImageFormats = ["image/jpeg" , "image/png" , "image/jpg" , "image/gif"];
 
      if(!allowedImageFormats.includes(addBookImg.files[0].type)){
         imgError.textContent = "jpg , png , jpeg , gif are the only formats supported";
+        event.preventDefault();
+
      }
 
      else{
@@ -232,12 +258,9 @@ addBookForm.addEventListener("submit", (event) =>{
 
 })
 
-
 const editBookForm = document.getElementById("editBookForm");
 
-
-
-editBookForm.addEventListener("submit", (event) =>{
+editBookForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const isbn = document.getElementById("bookIsbn2");
@@ -372,19 +395,19 @@ editBookForm.addEventListener("submit", (event) =>{
          descError.textContent ="names cannot contain symboles or numbers";
      }
 
-     if(!addBookImg.files[0]){
-        imgError.textContent = "pls fill the image";
-     }
+    //  if(!addBookImg.files[0]){
+    //     imgError.textContent = "pls fill the image";
+    //  }
 
-     const allowedImageFormats = ["image/jpeg" , "image/png" , "image/jpg" , "image/gif"];
+    //  const allowedImageFormats = ["image/jpeg" , "image/png" , "image/jpg" , "image/gif"];
 
-     if(!allowedImageFormats.includes(addBookImg.files[0].type)){
-        imgError.textContent = "jpg , png , jpeg , gif are the only formats supported";
-     }
+    //  if(!allowedImageFormats.includes(addBookImg.files[0].type)){
+    //     imgError.textContent = "jpg , png , jpeg , gif are the only formats supported";
+    //  }
 
-     else{
-        imgError.textContent = "";
-     }
+    //  else{
+    //     imgError.textContent = "";
+    //  }
 
 })
 

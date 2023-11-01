@@ -34,10 +34,10 @@
             </div>
 
             <!-- CATEGORIES CONTAINER =========== -->
-            <div class="categories-section">
+            <div class="categories-section" id="category-items">
 
                 <!-- HOW AND WHERE CATEGORIES WILL BE DISPLAYED =========== -->
-                <div class="category">
+                <!-- <div class="category">
                     <img src="../Img/Categories/Cat-beck.png" alt="category image">
                     <div class="info">
                         <h1>Drama</h1>
@@ -47,57 +47,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="category">
-                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
-                    <div class="info">
-                        <h1>Drama</h1>
-                        <div>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="modify_Category_btn sp-btn ">Modify</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="category">
-                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
-                    <div class="info">
-                        <h1>Drama</h1>
-                        <div>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="modify_Category_btn sp-btn ">Modify</button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="category">
-                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
-                    <div class="info">
-                        <h1>Drama</h1>
-                        <div>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="modify_Category_btn sp-btn ">Modify</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="category">
-                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
-                    <div class="info">
-                        <h1>Drama</h1>
-                        <div>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="modify_Category_btn sp-btn ">Modify</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="category">
-                    <img src="../Img/Categories/Cat-beck.png" alt="category image">
-                    <div class="info">
-                        <h1>Drama</h1>
-                        <div>
-                            <button class="sp-btn delete">Delete</button>
-                            <button class="modify_Category_btn sp-btn ">Modify</button>
-                        </div>
-                    </div>
-                </div>
+                -->
+             
+             
             </div>
         </div>
     </section>
@@ -118,8 +70,7 @@
         </div>
 
         <!-- FORM ============ -->
-        <form action="" method="post" id="New-category-form">
-            
+        <form  id="addCategoryForm">
 
             <input type="text" value="01" name="category-id" readonly>
 
@@ -130,7 +81,9 @@
             <div class="errorMessage">
                 <p id="errorMessage" style="color: white; font-weight: 600;"></p>
             </div>
-
+            <div class="validation-msg">
+                <p id="validation" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+            </div>
             <button class="sp-btn-reverse" type="submit">Save Details</button>
         </form>
     </section>
@@ -148,7 +101,7 @@
             <button class="sp-btn modify_Category_Btn_close">Close</button>
         </div>
 
-        <form action="" method="post">
+        <form id="modifyCategory" action="" method="post">
             <input type="text" value="01" readonly name="category-id" style="background-color: #eaeaea;">
             <input type="text" value="Drama" name="" id="modifyCatName">
             <textarea name="" id="modifyCatDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias in ratione asperiores dolorem consequuntur quae dicta exercitationem maxime!</textarea>
@@ -170,6 +123,7 @@
     <!-- SCRIPT =============== -->
     <!-- <script src="../js/category.js"></script> -->
     <script src="../../../javascript/validation.js"></script>
+    <script src="../../../javascript/models.js"></script>
 
     <!-- -->
     <script>
@@ -206,5 +160,7 @@
         }
 
     </script>
+     <script src="../../../javascript/validation.js"></script>
+     <script src="../../../javascript/models.js"></script>
 </body>
 </html>
