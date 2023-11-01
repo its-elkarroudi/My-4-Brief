@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cartes-sec{
+    height: 100vh;
+ 
+
+}
+.containercarte{
+  
+    width: 90%;
+    margin: 0 auto;
+    
+    
+    
+}
+.cartesdiv{
+   min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.product-cart{
+  min-height: 80vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+   
+
+}
+.cartes{
+    width: 95%;
+    height: 6rem;
+    background-color: #EDF2F4;
+    border: 1px #28427B solid;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 10px;
+    
+    
+} 
+.imgcart{
+    height: 70%;
+    width: 4rem;
+    background-color: black;
+}
+.infocart{
+    width: 200px;
+    height: 5rem;
+    
+    margin-left: 10px;
+}
+.infocart h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 2;
+}
+
+.paragraphcart{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: end;
+    font-weight: bold;
+}
+.paragraphcart div{
+    height: 25px;
+    width: 80px;
+    border: 1px #28427B solid;
+    border-right: 7px #28427B solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carte-delete{
+    height: 30px;
+    width: 35vw;
+    display: flex;
+    justify-content: right;
+}
+.carte-delete img{
+    width: 30px;
+    height: 30px;
+}
+.product-summary {
+    height: 80vh;
+    width: 30vw;
+    
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+}
+.summary{
+    height: 90%;
+    width: 90%;
+    background-color: #EDF2F4;
+    border: 1px #28427B solid;
+}
+.summarytitle{
+    width: 80%;
+    margin: auto;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.subtotal{
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.taxes{
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.shipping{
+    height: 20%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.codeinput{
+    border: none;
+
+}
+.inputdiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.promocode{
+    width: 90%;
+    background-color: white;
+    border: 1px #28427B solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+    
+    
+}
+.promocode button {
+    height: 40px;
+    width: 240px;
+    background-color: #28427B;
+    
+    border: none;
+
+}
+.promocode a{
+    color: white;
+}
+.total{
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.summary-btn a{
+    
+    height: 40px;
+    width: 80%;
+    background-color: #28427B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.summary-btn button{
+    color: white;
+    height: 40px;
+    width: 80%;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    .cartesdiv {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .product-cart {
+        width: 90vw;
+        min-height: 40vh;
+        margin-top: 5px;
+    }
+    .containercarte {
+        width: 100vw;
+    }
+    .product-summary{
+        width: 83vw;
+        height: 75vh;
+    }
+    .codeinput{
+        width: 100%;
+        font-size: 12px;
+    
+    }
+    .promocode button {
+        height: 30px;
+        width: 150px;
+        background-color: #28427B;
+        font-size: 15px;
+        
+        border: none;
+    
+    }
+    .summary{
+        height: 75%;
+    }
+}
