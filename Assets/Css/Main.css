@@ -382,6 +382,11 @@ input.valid::placeholder, textarea.valid::placeholder {
   background-color: var(--third-color);
 }
 
+#products .products-container .product img,
+#products .products-container .product h3 {
+  cursor: pointer;
+}
+
 #products .products-container .product .price button {
   display: none;
 }
@@ -425,8 +430,89 @@ input.valid::placeholder, textarea.valid::placeholder {
   #products .products-container .product .product-info .price button {
     display: block;
     font-size: 12px;
-    height: 30px;
+    height: 37px;
     padding: 0 5px;
     cursor: pointer;
+  }
+
+}
+#product-information {
+  position: fixed;
+  top: 0;
+  right: -110%;
+  width: 90vw;
+  height: 100vh;
+  background-color: var(--third-color);
+  border-left: 10px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+#product-information button.close {
+  width: 100px;
+  margin: 0 0 20px 0;
+}
+
+#product-information.show-product {
+  right: 0;
+  transition-duration: 1s;
+}
+
+#product-information .product-info {
+  width: 45%;
+  text-align: justify;
+}
+
+#product-information div.all-product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#product-information .product-info h1 {
+  font-weight: 900;
+}
+
+#product-information .product-info p {
+  margin: 20px 0 50px 0;
+}
+
+#product-information .product-info div {
+  margin-top: 20px;
+}
+
+#product-information .product-info button {
+  width: 75%;
+}
+
+#product-information .product-info input {
+  width: 20%;
+}
+
+@media (max-width: 900px) {
+  #product-information .all-product-details {
+    width: 80vw;
+    flex-direction: column;
+  }
+  #product-information {
+    padding: 0 15px;
+  }
+  #product-information .product-image img {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  #product-information .product-info {
+    width: 95%;
+  }
+  #product-information .product-info p {
+    margin: 5px 0 20px 0;
+  }
+  #product-information .product-info div {
+    margin-top: 10px;
+  }
+  #product-information button.close {
+    margin: 0 0 20px 15px;
   }
 }/*# sourceMappingURL=Main.css.map */
