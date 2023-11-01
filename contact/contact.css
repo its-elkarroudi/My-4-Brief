@@ -1,0 +1,93 @@
+body {
+  height: 100vh;
+}
+section {
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  flex-direction: column;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#check {
+  display: flex;
+  align-items: center;
+}
+
+#chbx {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+h1 {
+  font-size: larger;
+  font-weight: 900;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#Name {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#Name input {
+  width: 49%;
+}
+
+input,
+textarea {
+  color: #34495e;
+  border-color: #34495e;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 200px;
+}
+
+#subm {
+  display: flex;
+  justify-content: space-between;
+}
+
+#subm a {
+  text-decoration: underline;
+}
+
+#subm button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 25px;
+  font-weight: 500;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #34495e;
+  border: 2px solid #34495e;
+}
+
+@media (max-width: 768px) {
+  #Name input {
+    width: 100%;
+  }
+}
+
+#parag {
+  display: none;
+}
+
+.block {
+  display: block;
+  background-color: red;
+  color: white;
+}
