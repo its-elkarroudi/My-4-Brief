@@ -98,7 +98,7 @@ const addCategory = (categoryTitle,categoryDesc) =>{
 
 }
 
-
+addCategory("Dramic","random description");
 
 const addAuhtor = (authorName,speciality) =>{
     const id = new Date().getTime().toString();
