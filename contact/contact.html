@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/da6b47f324.js" crossorigin="anonymous"></script>
+
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="../Assets/Css/Main.css">
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <title>BookSea - Contact</title>
+</head>
+
+<body>
+
+    <!-- START HEADER SECTION -->
+    <header>
+        <div class="head-1">
+
+            <div class="container  w-[90vw]">
+                <a href="../Administration/Admin.html">Administration</a>
+            </div>
+        </div>
+
+        <div class="head-2">
+            <div class="container d-flex w-[90vw]">
+
+                <div class="logo">
+                    <a href=""><img src="../Assets/Img/logo.png" alt="BookSea Logo"></a>
+                </div>
+
+                <div class="navbar d-flex">
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../categories/categories.html">Categories</a></li>
+                            <li><a href="../Assets/Html/Products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <i class="fa-solid fa-bars active_Burger" id="Burger_Menu"></i>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h1>Contact Us</h1>
+        <p>It is a long established fact that a reader will be distracted .</p>
+        <form action="#" id="contact-form">
+            <div id="Name">
+                <input type="text" id="fName" placeholder="First name">
+                <input type="text" id="lName" placeholder="Last name">
+            </div>
+            <input type="email" placeholder="Email" id="email">
+            <!-- <div class="errorMessage">invalid Email</div> -->
+            <input type="text" id="topic" placeholder="The topic of your message">
+            <textarea name="Message" id="Message-box" cols="30" rows="10" placeholder="Message"></textarea>
+            <div id="subm">
+                <div id="check">
+                    <input type="checkbox" id="chbx">
+                    <label for="check">Agree to <a href="#">privacy policy</a></label>
+                </div>
+                <button type="submit" id="submit">Send</button>
+            </div>
+        </form>
+    </section>
+
+
+
+    <footer>
+        <div class="foot-1">
+            <div class="container d-flex">
+
+                <div class="footer-links">
+                    <a href="../../index.html">
+                        <img src="../Img/logo.png" alt="BookSea Logo">
+                    </a>
+
+                    <div class="links">
+                        <ul class="pages">
+                            <li>Pages</li>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../../categories/categories.html">Categories</a></li>
+                            <li><a href="Product-page.html">Products</a></li>
+                            <li><a href="Contact-us.html">Contact Us</a></li>
+                        </ul>
+
+                        <ul class="support">
+                            <li>Support</li>
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Faq</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subscribe">
+                    <h3>Subscribe</h3>
+                    <form action="" id="subscribeForm">
+                        <input type="text" placeholder="Email Address" name="Subscribe-Email">
+                        <button type="submit" class="sp-btn-reverse">Send</button>
+                    </form>
+                    <div class="errorMessage"></div>
+                    <p>By Subscribing You Agree To Our <a href="#"><u>Privacy Policy</u></a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="foot-2">
+            <div class="container">
+                <h4>All right reserved</h4>
+            </div>
+        </div>
+    </footer>
+
+    <section id="product-information" class="">
+
+        <button class="close sp-btn product_information_close">close</button>
+
+        <div class="all-product-details">
+            <div class="product-image">
+                <img src="../Img/products/big-image.png" alt="">
+            </div>
+
+            <div class="product-info">
+                <h1>Product Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero officiis eum culpa quas mollitia,
+                    at provident unde nisi, consequuntur dolorum illo rem optio maiores vel aliquam, ea adipisci aperiam
+                    incidunt expedita? Aut, molestiae nihil?</p>
+
+
+                <h1>1000 Dh <del>1500 Dh</del></h1>
+                <div class="d-flex">
+                    <input type="number" name="order_number" id="" value="1" min="1" max="20">
+                    <button class="sp-btn-reverse">Add to card</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="contact.js"></script>
+    <script src="../../javascript/code-repeat.js"></script>
+    <script src="../../javascript/Products-details-pop-up.js"></script>
+
+</body>
+
+</html>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script src="javascript/code-repeat.js"></script>
+
+</body>
+
+</html>
